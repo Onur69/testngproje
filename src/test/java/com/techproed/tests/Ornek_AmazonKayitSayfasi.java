@@ -35,7 +35,7 @@ public class Ornek_AmazonKayitSayfasi extends TestBase {
         sifre.sendKeys("asdfgh");
 
         //bu sekilde de webelement'i kullanmadan yazabiliriz
-        driver.findElement(By.id("ap_password_check")).sendKeys("asdfgh");;
+        driver.findElement(By.id("ap_password_check")).sendKeys("asdfgh");
 
 
         WebElement onaylama = driver.findElement(By.id("continue"));
