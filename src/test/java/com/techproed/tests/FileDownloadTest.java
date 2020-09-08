@@ -1,13 +1,10 @@
 package com.techproed.tests;
-
 import com.techproed.utilities.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class FileDownloadTest extends TestBase {
@@ -16,10 +13,9 @@ public class FileDownloadTest extends TestBase {
         System.out.println(System.getProperty("user.dir"));
         System.out.println(System.getProperty("user.home"));
 
-        String kullaniciDosyaYolu = System.getProperty("user.dir");
-
-        String pomXmlDosyaYolu = kullaniciDosyaYolu + "/pom.xml";
-
+        //String kullaniciDosyaYolu = System.getProperty("user.dir");
+        //String pomXmlDosyaYolu = kullaniciDosyaYolu + "/pom.xml";
+        String pomXmlDosyaYolu = System.getProperty("user.dir")+"/pom.xml";//yukardaki 2 syntax yerine bu sekilde de olabilir
         boolean varMi = Files.exists(Paths.get(pomXmlDosyaYolu));
         Assert.assertTrue(varMi);
     }
@@ -37,16 +33,16 @@ public class FileDownloadTest extends TestBase {
     }
     @Test
     public void dosyaDownload(){
-        // C:\Users\onurn\Downloads\Amsterdam.jpg
+        // C:\Users\onurn\Downloads\logo5.png
         driver.get("http://the-internet.herokuapp.com/download");
-        WebElement amsterdamLinki = driver.findElement(By.partialLinkText("Amsterdam.jpg"));
+        WebElement amsterdamLinki = driver.findElement(By.partialLinkText("logo5.png"));
         amsterdamLinki.click();
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        boolean varMi = Files.exists(Paths.get("C:\\Users\\onurn\\Downloads\\Amsterdam.jpg"));
+        boolean varMi = Files.exists(Paths.get("C:\\Users\\onurn\\Downloads\\logo5.png"));
         Assert.assertTrue(varMi);
     }
 

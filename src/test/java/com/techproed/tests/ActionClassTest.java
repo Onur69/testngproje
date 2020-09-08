@@ -7,8 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-import javax.swing.*;
-import java.security.Key;
 
 public class ActionClassTest extends TestBase {
     @Test
@@ -79,13 +77,13 @@ public class ActionClassTest extends TestBase {
 
           }
           @Test
-    public void dragAndDrop(){
-        driver.get("http://google.com");
-        WebElement aramaKutusu = driver.findElement(By.name("q"));
-        WebElement logo = driver.findElement(By.id("hplogo"));
+    public void dragAndDrop() throws InterruptedException {//bu komut google da calismadi baska bir sitede denenecek
+        driver.get("http://www.koalapalace.com/Account/Logon");
+        WebElement aramaKutusu = driver.findElement(By.id("UserName"));
+        WebElement logo = driver.findElement(By.xpath("//*[.='Koalapalace']"));
 
         Actions actions = new Actions(driver);
-
+        Thread.sleep(10000);
         actions.dragAndDrop(logo,aramaKutusu).perform();
 
           }
