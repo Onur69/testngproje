@@ -2,7 +2,6 @@ package com.techproed.tests;
 
 import com.techproed.utilities.TestBase;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import java.util.Set;
@@ -31,7 +30,7 @@ public class WindowHandleTest extends TestBase {
         //for ile acilan tum pencerelerin handle'larini ekrana yazdirabiliriz.
 
         //ikinci sayfanin handlesi ni alalim
-        Object[] arr = (Object[]) tumPencereler.toArray();
+        Object[] arr =  tumPencereler.toArray();
         Object ikinciHandle = arr [arr.length-1];
         System.out.println(ikinciHandle);
 

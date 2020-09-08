@@ -8,6 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import javax.swing.*;
+import java.security.Key;
 
 public class ActionClassTest extends TestBase {
     @Test
@@ -54,5 +55,38 @@ public class ActionClassTest extends TestBase {
 
         Thread.sleep(3000);
         actions.sendKeys(Keys.ARROW_DOWN).perform();//arrow== yon tuslarini kontrol ediyor.
+          }
+          @Test
+    public void buyukKucukYazma(){
+        //MERHABA nasilsiniz LIVE channel
+          driver.get("http://google.com");
+          //name="q"
+          WebElement aramaKutusu = driver.findElement(By.name("q"));
+          //bu asagidaki standart yazma methodumuz
+          //aramaKutusu.sendKeys("merhaba nasilsiniz");
+
+           //hepsini buyuk yazdirmak icin asagidaki yolu izleriz
+           //aramaKutusu.sendKeys(Keys.SHIFT + "merhaba nasilsiniz");
+
+              //bir kismini buyuk bir kismini kucuk yazdirmak icin asagidaki yol izlenir
+          Actions actions = new Actions(driver);
+          actions.moveToElement(aramaKutusu).click()
+                  .keyDown(Keys.SHIFT)
+                  .sendKeys("merhaba")
+                  .keyUp(Keys.SHIFT)
+                  .sendKeys(" nasilsiniz")
+                  .perform();
+
+          }
+          @Test
+    public void dragAndDrop(){
+        driver.get("http://google.com");
+        WebElement aramaKutusu = driver.findElement(By.name("q"));
+        WebElement logo = driver.findElement(By.id("hplogo"));
+
+        Actions actions = new Actions(driver);
+
+        actions.dragAndDrop(logo,aramaKutusu).perform();
+
           }
 }
