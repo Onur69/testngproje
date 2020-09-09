@@ -35,8 +35,8 @@ public class FileDownloadTest extends TestBase {
     public void dosyaDownload(){
         // C:\Users\onurn\Downloads\logo5.png
         driver.get("http://the-internet.herokuapp.com/download");
-        WebElement amsterdamLinki = driver.findElement(By.partialLinkText("logo5.png"));
-        amsterdamLinki.click();
+        WebElement logo5 = driver.findElement(By.partialLinkText("logo5.png"));
+        logo5.click();
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
