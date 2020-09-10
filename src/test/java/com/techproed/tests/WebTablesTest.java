@@ -8,18 +8,19 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class WebTablesTest extends TestBase {
+public class WebTablesTest extends TestBase {//bu soru classtan calistirmiyor hata veriyor.
+                                            //testlerden calisiyor
 
     public void giris(){//normal method olarak olusturduk ve testlerin icinden cagirabilecegiz.
         driver.get("http://fhctrip-qa.com/admin/HotelRoomAdmin");
-
         driver.findElement(By.id("UserName")).sendKeys("manager2");
         driver.findElement(By.id("Password")).sendKeys("Man1ager2!" + Keys.ENTER);
+
     }
     @Test
     public void table() throws InterruptedException {
         giris();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         //tbody deki butun elementleri alalim ve yazdiralim
         WebElement tbody = driver.findElement(By.xpath("//tbody"));
         System.out.println(tbody.getText());
@@ -33,7 +34,7 @@ public class WebTablesTest extends TestBase {
         @Test
         public void tumSatirlar() throws InterruptedException {
             giris();
-            Thread.sleep(3000);
+            Thread.sleep(5000);
             List<WebElement> tumSatirlar = driver.findElements(By.xpath("//tbody/tr"));
             for (WebElement satirlar : tumSatirlar) {
                 System.out.println(satirlar.getText());
@@ -42,7 +43,7 @@ public class WebTablesTest extends TestBase {
         @Test
         public void tumBody() throws InterruptedException {
             giris();
-            Thread.sleep(3000);
+            Thread.sleep(5000);
             List<WebElement> tumHucreler = driver.findElements(By.xpath("//tbody/tr/td"));
             for (WebElement hucreler:tumHucreler) {
                 System.out.println(hucreler.getText());
@@ -52,7 +53,7 @@ public class WebTablesTest extends TestBase {
         @Test
         public void belirliBirSutunuYazdirma() throws InterruptedException {
             giris();
-            Thread.sleep(3000);
+            Thread.sleep(5000);
 
             // //tbody/tr/td[4] -> Burada 4. sütun'u yazdırıyoruz.
             // buradaki 4 sayısını değiştirerek istediğimiz kolon(sütun)'u yazdırabiliriz.
@@ -64,7 +65,7 @@ public class WebTablesTest extends TestBase {
         @Test
         public void calistir() throws InterruptedException {
         giris();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         hucreYazdir(3,5);
         hucreYazdir(5,2);
         hucreYazdir(2,5);
