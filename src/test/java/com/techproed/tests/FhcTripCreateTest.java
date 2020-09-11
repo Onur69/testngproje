@@ -24,7 +24,7 @@ public class FhcTripCreateTest extends TestBase {
         fhcTripCreatePage.adres.sendKeys("adana");
         fhcTripCreatePage.telefon.sendKeys("3737374");
         fhcTripCreatePage.mail.sendKeys("sgsgdg@gamil.com");
-        Select select = new Select(fhcTripCreatePage.grup);
+        Select select = new Select(fhcTripCreatePage.grup);//parantez icinde dropDown WebElementi var
         select.selectByIndex(1);
         fhcTripCreatePage.saveButonu.click();
     }
