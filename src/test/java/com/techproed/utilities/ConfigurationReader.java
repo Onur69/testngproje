@@ -27,6 +27,7 @@ public class ConfigurationReader {
     }
     //properties.getProperty("username");==>manager2'yi verir
     public static String getProperty(String key){
+
         return  properties.getProperty(key);
     }
 }
