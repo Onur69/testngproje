@@ -41,7 +41,7 @@ public class FhcTripHotelRoomCreateTest extends TestBase {
         page.maxChildCountKutusu.sendKeys("5");
 
         page.saveButonu.click();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
 
         boolean basariliMi = page.basariliYazisi.isDisplayed();
         Assert.assertTrue(basariliMi);

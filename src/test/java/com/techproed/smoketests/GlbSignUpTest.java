@@ -8,7 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 public class GlbSignUpTest {
-    @Test
+    @Test (groups = {"glbtrader"})
     public void test() {
         //1. https://www.glbtrader.com/register-2.html adresine gidin
         Driver.getDriver().get(ConfigurationReader.getProperty("glb_url"));

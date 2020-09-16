@@ -28,8 +28,9 @@ public class ActionClassTest extends TestBase {
         actions.doubleClick(button).perform();
     }
     @Test
-    public void hoverOver() {
-        driver.get("http://amazon.com");
+    public void hoverOver() throws InterruptedException {
+        Thread.sleep(5000);
+        driver.navigate().to("https://www.amazon.com");
         WebElement menu = driver.findElement(By.id("nav-link-accountList"));
         Actions actions = new Actions(driver);
         // mouse'u istediğimiz webelement'in üzerine götürmek istiyorsak,
@@ -78,6 +79,7 @@ public class ActionClassTest extends TestBase {
           }
           @Test
     public void dragAndDrop() throws InterruptedException {//bu komut google da calismadi baska bir sitede denenecek
+        Thread.sleep(10000);
         driver.get("http://www.koalapalace.com/Account/Logon");
         WebElement aramaKutusu = driver.findElement(By.id("UserName"));
         WebElement logo = driver.findElement(By.xpath("//*[.='Koalapalace']"));

@@ -13,10 +13,9 @@ public class FhcTripCreateTest extends TestBase {
         driver.findElement(By.id("UserName")).sendKeys("manager2");
         driver.findElement(By.id("Password")).sendKeys("Man1ager2!"+ Keys.ENTER);
     }
-    @Test
-    public void kayit(){
+    @Test (groups = {"fhctrip"})
+    public void kayit() throws InterruptedException {
         giris();
-        driver.get("http://fhctrip-qa.com/admin/HotelAdmin/Create");
 
         FhcTripCreatePage fhcTripCreatePage = new FhcTripCreatePage(driver);
         fhcTripCreatePage.code.sendKeys("1234");
@@ -24,8 +23,10 @@ public class FhcTripCreateTest extends TestBase {
         fhcTripCreatePage.adres.sendKeys("adana");
         fhcTripCreatePage.telefon.sendKeys("3737374");
         fhcTripCreatePage.mail.sendKeys("sgsgdg@gamil.com");
+
         Select select = new Select(fhcTripCreatePage.grup);//parantez icinde dropDown WebElementi var
         select.selectByIndex(1);
+        Thread.sleep(3000);
         fhcTripCreatePage.saveButonu.click();
     }
 }
