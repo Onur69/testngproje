@@ -13,7 +13,7 @@ public class FhcTripCreateTest extends TestBase {
         driver.findElement(By.id("UserName")).sendKeys("manager2");
         driver.findElement(By.id("Password")).sendKeys("Man1ager2!"+ Keys.ENTER);
     }
-    @Test (groups = {"fhctrip"})
+    @Test
     public void kayit() throws InterruptedException {
         giris();
 
