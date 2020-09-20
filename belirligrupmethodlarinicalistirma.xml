@@ -10,7 +10,7 @@
         </groups>
         <packages>
             <!-- aranılan grup id'sini hangi paket ya da class'larda aramak isterseniz,
-            hedef olarak buraya ekleyebiliyorsunuz -->
+            hedef olarak buraya eklemeniz gerekir -->
             <package name=".*"></package>
         </packages>
     </test>

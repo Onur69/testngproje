@@ -40,7 +40,7 @@ public abstract class TestBaseFinal {
         }
         Driver.closeDriver();
     }
-    // Raporlandırmayı sonlandırıyorduk.
+    // Raporlandırmayı sonlandırıyorduk.flush==>sifonu cekmek
     @AfterTest(alwaysRun = true)
     public void tearDownTest() {
         extentReports.flush();

@@ -10,6 +10,11 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class GoogleAramaTest extends TestBaseFinal {
+    /*
+    1.adim:google.com'a gidelim
+    2.adim:techproeducation aramasi yapalim
+    3.adim:sonuclar arasinda techproeducation.com yazisi var mi
+     */
     @Test
     public void aramaTesti() throws InterruptedException {
         extentTest  = extentReports.createTest("Google Arama","Google'da techproeducation araması yaptık.");
