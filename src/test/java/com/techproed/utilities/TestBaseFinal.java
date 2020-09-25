@@ -8,6 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import java.io.IOException;
+
 public abstract class TestBaseFinal {
     protected static ExtentReports extentReports;
     protected static ExtentTest extentTest;
