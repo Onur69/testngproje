@@ -11,6 +11,8 @@ import org.openqa.selenium.safari.SafariDriver;
 import java.util.concurrent.TimeUnit;
 
 public class Driver {
+
+
     // Eğer bir class'tan NESNE ÜRETİLMESİNİ İSTEMİYORSANIZ
     // constructor'ı private yapabilirsiniz (Singleton Class)
     private Driver(){ }
